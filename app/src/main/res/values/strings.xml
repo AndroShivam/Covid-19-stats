@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Covid-19 Stats</string>
+    <string name="total_cases">Total Cases</string>
+    <string name="covid_19">COVID-19</string>
+    <string name="total_recovered">Total Recovered</string>
+    <string name="total_deaths">Total Deaths</string>
+    <string name="test_text">0</string>
+    <string name="country_name">Country Name</string>
+
+    <string name="cases_today">Cases Today</string>
+    <string name="deaths_today">Deaths Today</string>
+    <string name="active_cases">Active Cases</string>
+    <string name="critical_cases">Critical Cases</string>
+    <string name="cases_per_million">Cases Per Million</string>
+    <string name="deaths_per_million">Deaths Per Million</string>
+    <string name="refresh">Refresh</string>
+    <string name="search">Search</string>
+</resources>

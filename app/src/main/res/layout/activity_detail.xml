@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="16dp"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp"
+    tools:context=".DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/detailCountryFlag"
+            android:layout_width="184dp"
+            android:transitionName="flag"
+            android:layout_height="108dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/detailProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/detailCountryFlag"
+            app:layout_constraintEnd_toEndOf="@id/detailCountryFlag"
+            app:layout_constraintStart_toStartOf="@id/detailCountryFlag"
+            app:layout_constraintTop_toTopOf="@id/detailCountryFlag" />
+
+        <TextView
+            android:id="@+id/detailCountryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/detailCountryFlag"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detailCountryLat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/detailCountryName"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryName" />
+
+        <TextView
+            android:id="@+id/detailCountryLong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/test_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/detailCountryLat"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryName" />
+
+        <View
+            android:id="@+id/seperator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="16dp"
+            android:background="@color/colorGray"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryFlag" />
+
+        <TextView
+            android:id="@+id/detailCountryCases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/total_cases"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/detailCountryFlag"
+            app:layout_constraintTop_toBottomOf="@id/seperator" />
+
+        <TextView
+            android:id="@+id/detailCountryCasesCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/test_text"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toEndOf="@id/detailCountryLat"
+            app:layout_constraintTop_toBottomOf="@id/seperator" />
+
+        <TextView
+            android:id="@+id/detailCountryCasesToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/cases_today"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/detailCountryCases"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryCases" />
+
+        <TextView
+            android:id="@+id/detailCountryCasesTodayCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/test_text"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toEndOf="@id/detailCountryLat"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryCasesCount" />
+
+        <TextView
+            android:id="@+id/detailCountryDeaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/total_deaths"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/detailCountryCasesToday"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryCasesToday" />
+
+        <TextView
+            android:id="@+id/detailCountryDeathsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/test_text"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toEndOf="@id/detailCountryLat"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryCasesTodayCount" />
+
+        <TextView
+            android:id="@+id/detailCountryDeathsToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/deaths_today"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/detailCountryDeaths"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryDeaths" />
+
+        <TextView
+            android:id="@+id/detailCountryDeathsTodayCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/test_text"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toEndOf="@id/detailCountryLat"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryDeathsCount" />
+
+        <TextView
+            android:id="@+id/detailCountryRecovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/total_recovered"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/detailCountryDeathsToday"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryDeathsToday" />
+
+        <TextView
+            android:id="@+id/detailCountryRecoveredCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/test_text"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toEndOf="@id/detailCountryLat"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryDeathsTodayCount" />
+
+        <TextView
+            android:id="@+id/detailCountryActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/active_cases"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/detailCountryRecovered"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryRecovered" />
+
+        <TextView
+            android:id="@+id/detailCountryDeathsActiveCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/test_text"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toEndOf="@id/detailCountryLat"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryRecoveredCount" />
+
+        <TextView
+            android:id="@+id/detailCountryCritical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/critical_cases"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/detailCountryActive"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryActive" />
+
+        <TextView
+            android:id="@+id/detailCountryCriticalCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/test_text"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toEndOf="@id/detailCountryLat"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryDeathsActiveCount" />
+
+        <TextView
+            android:id="@+id/detailCountryCasesPerMil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/cases_per_million"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/detailCountryCritical"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryCritical" />
+
+        <TextView
+            android:id="@+id/detailCountryCasesPerMilCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/test_text"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toEndOf="@id/detailCountryLat"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryCriticalCount" />
+
+        <TextView
+            android:id="@+id/detailCountryDeathsPerMil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/deaths_per_million"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/detailCountryCasesPerMil"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryCasesPerMil" />
+
+        <TextView
+            android:id="@+id/detailCountryDeathsPerMilCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/test_text"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toEndOf="@id/detailCountryLat"
+            app:layout_constraintTop_toBottomOf="@id/detailCountryCasesPerMilCount" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
